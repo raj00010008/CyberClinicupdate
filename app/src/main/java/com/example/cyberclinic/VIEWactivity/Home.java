@@ -39,15 +39,15 @@ public class Home extends AppCompatActivity {
         });
 
 
-    updatedata();
+//    updatedata();
     }
 
 
-    private void updatedata() {
-        RegistrationDAO registrationDAO = RegistrationRoomDataBase.getDatabase(context).registrationDAO();
-        RegistrationTable displaydata = registrationDAO.getDataByid("sushil");
-        displaydata.getEmail();
-    }
+//    private void updatedata() {
+//        RegistrationDAO registrationDAO = RegistrationRoomDataBase.getDatabase(context).registrationDAO();
+//        RegistrationTable displaydata = registrationDAO.getDataByid("sushil");
+//        displaydata.getEmail();
+//    }
 
 
 }

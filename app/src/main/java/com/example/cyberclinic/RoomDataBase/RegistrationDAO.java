@@ -18,7 +18,7 @@ public interface RegistrationDAO {
     void insertDetail(RegistrationTable data);
     @Delete
     void deleteInfo(RegistrationTable data);
-    @Query("select *from REGISTRATION_TABLE where email= :email limit 1")
-     RegistrationTable getDataByid(String email);
+//    @Query("select *from REGISTRATION_TABLE where email= :email limit 1")
+//     RegistrationTable getDataByid(String email);
 
 }
