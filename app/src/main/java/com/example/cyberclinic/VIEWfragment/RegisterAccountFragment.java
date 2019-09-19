@@ -139,8 +139,8 @@ public class RegisterAccountFragment extends Fragment {
 RegistrationTable registrationTable =new RegistrationTable(saveEmail,savePassword,saveMobile,saveFirstName,saveLastName);
 
      registrationViewModel.insert(registrationTable);
-        Toast.makeText(getContext(), "data is saved", Toast.LENGTH_SHORT).show();
-        ((LoginPage) getActivity()).callFragmentLogin();
+//        Toast.makeText(getContext(), "data is saved", Toast.LENGTH_SHORT).show();
+//        ((LoginPage) getActivity()).callFragmentLogin();
 
 
 
