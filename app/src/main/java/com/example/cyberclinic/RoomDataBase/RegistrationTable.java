@@ -10,27 +10,25 @@ public class RegistrationTable {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "Id")
     private int id;
-    @ColumnInfo(name ="email")
+    @ColumnInfo(name = "email")
     private String email;
-    @ColumnInfo(name="password")
+    @ColumnInfo(name = "password")
     private String password;
-    @ColumnInfo(name="number")
-   private String number;
-    @ColumnInfo(name="firstName")
+    @ColumnInfo(name = "number")
+    private String number;
+    @ColumnInfo(name = "firstName")
     private String firstName;
-    @ColumnInfo(name="lastName")
+    @ColumnInfo(name = "lastName")
     private String lastName;
 
-    public RegistrationTable(String email,String password,String number,String firstName,String lastName)
-    {
-        this.email=email;
-        this.password=password;
-        this.number=number;
-        this.firstName=firstName;
-        this.lastName=lastName;
+    public RegistrationTable(String email, String password, String number, String firstName, String lastName) {
+        this.email = email;
+        this.password = password;
+        this.number = number;
+        this.firstName = firstName;
+        this.lastName = lastName;
 
     }
-
 
     public String getEmail() {
         return email;
@@ -52,33 +50,16 @@ public class RegistrationTable {
         return password;
     }
 
-    public void setPassword(String passsword) {
-        this.password = passsword;
-    }
-
     public String getNumber() {
         return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
 
 }

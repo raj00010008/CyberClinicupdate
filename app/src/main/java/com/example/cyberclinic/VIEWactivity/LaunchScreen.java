@@ -15,12 +15,16 @@ public class LaunchScreen extends AppCompatActivity {
         setContentView(R.layout.activity_launch_screen);
         getSupportActionBar().hide();
     }
-        public void loginActivity(View view) {
-        Intent intent =new Intent(LaunchScreen.this,LoginPage.class);
-        startActivity(intent); }
-        @Override
-    protected void onPause() {
-        finish();
-        super.onPause();
+
+    public void loginActivity(View view) {
+        Intent intent = new Intent(LaunchScreen.this, LoginPage.class);
+        startActivity(intent);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
 }

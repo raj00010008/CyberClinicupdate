@@ -16,9 +16,7 @@ public interface RegistrationDAO {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertDetail(RegistrationTable data);
+
     @Delete
     void deleteInfo(RegistrationTable data);
-//    @Query("select *from REGISTRATION_TABLE where email= :email limit 1")
-//     RegistrationTable getDataByid(String email);
-
 }

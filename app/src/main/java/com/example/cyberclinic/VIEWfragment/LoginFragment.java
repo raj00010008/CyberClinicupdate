@@ -2,10 +2,8 @@ package com.example.cyberclinic.VIEWfragment;
 
 
 import android.app.AlertDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,27 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
-
-import com.example.cyberclinic.Api.ApiClient;
-import com.example.cyberclinic.Api.ApiUserService;
 import com.example.cyberclinic.R;
 import com.example.cyberclinic.RoomDataBase.RegistrationTable;
-import com.example.cyberclinic.VIEWactivity.Home;
 import com.example.cyberclinic.ViewModel.RegistrationViewModel;
 import com.example.cyberclinic.VIEWactivity.LoginPage;
-import com.example.cyberclinic.model.UserData;
-
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -103,7 +88,8 @@ public class LoginFragment extends Fragment {
         deleteDialog.setTitle("Enter E-mail");
         deleteDialog.setPositiveButton("Send", null);
         deleteDialog.setNegativeButton("Cancel", null);
-        deleteDialog.show(); }
+        deleteDialog.show();
+    }
 
     private void loginRegisterUser() {
         String checkEmail = email.getText().toString().trim();
@@ -111,6 +97,7 @@ public class LoginFragment extends Fragment {
         validation(checkEmail, checkPassword);
 
     }
+
     private void validation(String checkEmail, String checkPassword) {
 
         if (TextUtils.isEmpty(checkEmail)) {
@@ -129,29 +116,8 @@ public class LoginFragment extends Fragment {
 
         onValidate(checkEmail, checkPassword);
     }
-
-    private void onValidate(final String email, final String password) {
-        ApiUserService apiService = ApiClient.getClient().create(ApiUserService.class);
-        apiService.loginUser(email, password, "", "", "").enqueue(new Callback<UserData.Data>() {
-            @Override
-            public void onResponse(Call<UserData.Data> call, Response<UserData.Data> response) {
-                Log.i(TAG, "post submitted to API.");
-
-               RegistrationTable registrationTable =new RegistrationTable(response.body().getEmail(),response.body().getPassword(),response.body().getMobileno(),response.body().getName(),response.body().getLastname());
-                registrationViewModel.insert(registrationTable);
-                Toast.makeText(getContext(), "data is saved", Toast.LENGTH_SHORT).show();
-
-                Intent myIntent = new Intent(getActivity(), Home.class);
-                getActivity().startActivity(myIntent);
-
-                // ((LoginPage) getActivity()).callFragmentLogin();
-            }
-
-            @Override
-            public void onFailure(Call<UserData.Data> call, Throwable t) {
-                Log.e(TAG, "Unable to submit post to API.");
-            }
-        });
+    public void onValidate(final String email, final String password) {
+registrationViewModel.checkInputData(email,password);
 
 
     }

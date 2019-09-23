@@ -73,232 +73,116 @@ public class UserData {
             return contractKey;
         }
 
-        public void setContractKey(String contractKey) {
-            this.contractKey = contractKey;
-        }
-
         public String getGender() {
             return gender;
-        }
-
-        public void setGender(String gender) {
-            this.gender = gender;
         }
 
         public float getCreationTime() {
             return creationTime;
         }
 
-        public void setCreationTime(float creationTime) {
-            this.creationTime = creationTime;
-        }
-
         public String getCountrycode() {
             return countrycode;
-        }
-
-        public void setCountrycode(String countrycode) {
-            this.countrycode = countrycode;
         }
 
         public String getPushkit_device_id() {
             return pushkit_device_id;
         }
 
-        public void setPushkit_device_id(String pushkit_device_id) {
-            this.pushkit_device_id = pushkit_device_id;
-        }
-
         public String getRating() {
             return rating;
-        }
-
-        public void setRating(String rating) {
-            this.rating = rating;
         }
 
         public boolean isIs_removed() {
             return is_removed;
         }
 
-        public void setIs_removed(boolean is_removed) {
-            this.is_removed = is_removed;
-        }
-
         public String getMobileno() {
             return mobileno;
-        }
-
-        public void setMobileno(String mobileno) {
-            this.mobileno = mobileno;
         }
 
         public String getPassword() {
             return password;
         }
 
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
         public String getUser_type() {
             return user_type;
-        }
-
-        public void setUser_type(String user_type) {
-            this.user_type = user_type;
         }
 
         public boolean isIs_deleted() {
             return is_deleted;
         }
 
-        public void setIs_deleted(boolean is_deleted) {
-            this.is_deleted = is_deleted;
-        }
-
         public String getGcmId() {
             return gcmId;
-        }
-
-        public void setGcmId(String gcmId) {
-            this.gcmId = gcmId;
         }
 
         public String getAppIdFacebook() {
             return appIdFacebook;
         }
 
-        public void setAppIdFacebook(String appIdFacebook) {
-            this.appIdFacebook = appIdFacebook;
-        }
-
         public String getRatings() {
             return ratings;
-        }
-
-        public void setRatings(String ratings) {
-            this.ratings = ratings;
         }
 
         public String getIntake_form() {
             return intake_form;
         }
 
-        public void setIntake_form(String intake_form) {
-            this.intake_form = intake_form;
-        }
-
         public String getCustomerId() {
             return customerId;
-        }
-
-        public void setCustomerId(String customerId) {
-            this.customerId = customerId;
         }
 
         public float getId() {
             return id;
         }
 
-        public void setId(float id) {
-            this.id = id;
-        }
-
         public float getUpdation_time() {
             return updation_time;
-        }
-
-        public void setUpdation_time(float updation_time) {
-            this.updation_time = updation_time;
         }
 
         public String getLastAppointment() {
             return lastAppointment;
         }
 
-        public void setLastAppointment(String lastAppointment) {
-            this.lastAppointment = lastAppointment;
-        }
-
         public String getEmail() {
             return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
         }
 
         public String getAppIdGoogle() {
             return appIdGoogle;
         }
 
-        public void setAppIdGoogle(String appIdGoogle) {
-            this.appIdGoogle = appIdGoogle;
-        }
-
         public String getDevice_id() {
             return device_id;
-        }
-
-        public void setDevice_id(String device_id) {
-            this.device_id = device_id;
         }
 
         public float getAddress_id() {
             return address_id;
         }
 
-        public void setAddress_id(float address_id) {
-            this.address_id = address_id;
-        }
-
         public String getProfile_pic() {
             return profile_pic;
-        }
-
-        public void setProfile_pic(String profile_pic) {
-            this.profile_pic = profile_pic;
         }
 
         public String getTime_zone() {
             return time_zone;
         }
 
-        public void setTime_zone(String time_zone) {
-            this.time_zone = time_zone;
-        }
-
         public String getLastname() {
             return lastname;
-        }
-
-        public void setLastname(String lastname) {
-            this.lastname = lastname;
         }
 
         public boolean isPeas_survey_pending() {
             return peas_survey_pending;
         }
 
-        public void setPeas_survey_pending(boolean peas_survey_pending) {
-            this.peas_survey_pending = peas_survey_pending;
-        }
-
         public String getDob() {
             return dob;
         }
 
-        public void setDob(String dob) {
-            this.dob = dob;
-        }
-
         public boolean isThird_party_app() {
             return third_party_app;
-        }
-
-        public void setThird_party_app(boolean third_party_app) {
-            this.third_party_app = third_party_app;
         }
 
         public String getName() {
@@ -306,6 +190,39 @@ public class UserData {
         }
 
         public void setName(String name) {
+            this.name = name;
+        }
+
+        public Data(Address address, String contractKey, String gender, float creationTime, String countrycode, String pushkit_device_id, String rating, boolean is_removed, String mobileno, String password, String user_type, boolean is_deleted, String gcmId, String appIdFacebook, String ratings, String intake_form, String customerId, float updation_time, String lastAppointment, String email, String appIdGoogle, String device_id, float address_id, String profile_pic, String time_zone, String lastname, boolean peas_survey_pending, String dob, boolean third_party_app, String name) {
+            this.address = address;
+            this.contractKey = contractKey;
+            this.gender = gender;
+            this.creationTime = creationTime;
+            this.countrycode = countrycode;
+            this.pushkit_device_id = pushkit_device_id;
+            this.rating = rating;
+            this.is_removed = is_removed;
+            this.mobileno = mobileno;
+            this.password = password;
+            this.user_type = user_type;
+            this.is_deleted = is_deleted;
+            this.gcmId = gcmId;
+            this.appIdFacebook = appIdFacebook;
+            this.ratings = ratings;
+            this.intake_form = intake_form;
+            this.customerId = customerId;
+            this.updation_time = updation_time;
+            this.lastAppointment = lastAppointment;
+            this.email = email;
+            this.appIdGoogle = appIdGoogle;
+            this.device_id = device_id;
+            this.address_id = address_id;
+            this.profile_pic = profile_pic;
+            this.time_zone = time_zone;
+            this.lastname = lastname;
+            this.peas_survey_pending = peas_survey_pending;
+            this.dob = dob;
+            this.third_party_app = third_party_app;
             this.name = name;
         }
 
@@ -349,72 +266,44 @@ public class UserData {
                 return country;
             }
 
-            public void setCountry(String country) {
-                this.country = country;
-            }
-
             public String getCity() {
                 return city;
-            }
-
-            public void setCity(String city) {
-                this.city = city;
             }
 
             public String getUser_address() {
                 return user_address;
             }
 
-            public void setUser_address(String user_address) {
-                this.user_address = user_address;
-            }
-
             public float getLon() {
                 return lon;
-            }
-
-            public void setLon(float lon) {
-                this.lon = lon;
             }
 
             public String getUser_type() {
                 return user_type;
             }
 
-            public void setUser_type(String user_type) {
-                this.user_type = user_type;
-            }
-
             public String getUser_id() {
                 return user_id;
-            }
-
-            public void setUser_id(String user_id) {
-                this.user_id = user_id;
             }
 
             public String getPostalcode() {
                 return postalcode;
             }
 
-            public void setPostalcode(String postalcode) {
-                this.postalcode = postalcode;
-            }
-
             public String getSuburb() {
                 return suburb;
-            }
-
-            public void setSuburb(String suburb) {
-                this.suburb = suburb;
             }
 
             public String getLocation() {
                 return location;
             }
 
-            public void setLocation(String location) {
-                this.location = location;
+            public String getState() {
+                return state;
+            }
+
+            public float getLat() {
+                return lat;
             }
 
             public float getId() {
@@ -425,19 +314,18 @@ public class UserData {
                 this.id = id;
             }
 
-            public String getState() {
-                return state;
-            }
-
-            public void setState(String state) {
+            public Address(String creation_time, String country, String city, String user_address, float lon, String user_type, String user_id, String postalcode, String suburb, String location, String state, float lat) {
+                this.creation_time = creation_time;
+                this.country = country;
+                this.city = city;
+                this.user_address = user_address;
+                this.lon = lon;
+                this.user_type = user_type;
+                this.user_id = user_id;
+                this.postalcode = postalcode;
+                this.suburb = suburb;
+                this.location = location;
                 this.state = state;
-            }
-
-            public float getLat() {
-                return lat;
-            }
-
-            public void setLat(float lat) {
                 this.lat = lat;
             }
         }

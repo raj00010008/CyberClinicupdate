@@ -1,12 +1,10 @@
 package com.example.cyberclinic.Api;
 
 import com.example.cyberclinic.model.UserData;
-
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
-
 public interface ApiUserService {
     @FormUrlEncoded
     @POST("/user/register-user")
@@ -27,7 +25,6 @@ public interface ApiUserService {
 //                          @Field("dob") String dob,
 //                          @Field("contracktKey") String contracktKey
     );
-
     @FormUrlEncoded
     @POST("/CyberClinic//user/login")
     Call<UserData.Data> loginUser(
@@ -37,7 +34,4 @@ public interface ApiUserService {
             @Field("appIdGoogle") String appIdGoogle,
             @Field("gcm_id") String gcm_id
     );
-    //  Call<UserData.Data> loginUser(@Body UserData.Data userData);
-
-
 }

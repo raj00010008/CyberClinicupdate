@@ -7,7 +7,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {RegistrationTable.class}, version =3, exportSchema = false)
+@Database(entities = {RegistrationTable.class}, version = 3, exportSchema = false)
 public abstract class RegistrationRoomDataBase extends RoomDatabase {
     public abstract RegistrationDAO registrationDAO();
 

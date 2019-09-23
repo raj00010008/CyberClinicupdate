@@ -35,7 +35,7 @@ public class RegisterAccountFragment extends Fragment {
     TextView signInClicked;
     RegistrationViewModel registrationViewModel;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    String passwordPattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+    String passwordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,7 +46,7 @@ public class RegisterAccountFragment extends Fragment {
         lastName = view.findViewById(R.id.setLastName);
         email = view.findViewById(R.id.setE_mail);
         password = view.findViewById(R.id.setPassword);
-        signInClicked=view.findViewById(R.id.signIn);
+        signInClicked = view.findViewById(R.id.signIn);
         mobileNumber = view.findViewById(R.id.setMobileNumber);
         confirmPassword = view.findViewById(R.id.confirmPassword);
         registrationButton = view.findViewById(R.id.newRegister);
@@ -56,14 +56,14 @@ public class RegisterAccountFragment extends Fragment {
                 newRegistration();
             }
         });
-        registrationViewModel = ViewModelProviders.of(this).get(RegistrationViewModel.class);
-        registrationViewModel.getAllData().observe(this, new Observer<List<RegistrationTable>>() {
-            @Override
-            public void onChanged(List<RegistrationTable> registrationTables) {
-
-            }
-        });
-
+//        registrationViewModel = ViewModelProviders.of(this).get(RegistrationViewModel.class);
+//        registrationViewModel.getAllData().observe(this, new Observer<List<RegistrationTable>>() {
+//            @Override
+//            public void onChanged(List<RegistrationTable> registrationTables) {
+//
+//            }
+//        });
+//
         signInClicked.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,11 +72,7 @@ public class RegisterAccountFragment extends Fragment {
         });
         return view;
     }
-
-
     private void newRegistration() {
-
-
         String saveFirstName = firstName.getText().toString().trim();
         String saveLastName = lastName.getText().toString().trim();
         String saveEmail = email.getText().toString().trim();
@@ -107,8 +103,7 @@ public class RegisterAccountFragment extends Fragment {
             return;
         }
 
-        if(!saveEmail.matches(emailPattern))
-        {
+        if (!saveEmail.matches(emailPattern)) {
             email.setError("Please enter valid email addres");
             return;
         }
@@ -126,7 +121,7 @@ public class RegisterAccountFragment extends Fragment {
             return;
         }
 
-        if(!savePassword.matches(passwordPattern)) {
+        if (!savePassword.matches(passwordPattern)) {
             password.setError("please enter Valid Password,should contain atleast 0-9,Aa-Za,@ and 4 digit ");
 
             return;
@@ -136,17 +131,7 @@ public class RegisterAccountFragment extends Fragment {
     }
 
     private void onValidData(String saveFirstName, String saveLastName, String saveEmail, String savePassword, String saveMobile, String checkPassword) {
-RegistrationTable registrationTable =new RegistrationTable(saveEmail,savePassword,saveMobile,saveFirstName,saveLastName);
-
-     registrationViewModel.insert(registrationTable);
-//        Toast.makeText(getContext(), "data is saved", Toast.LENGTH_SHORT).show();
-//        ((LoginPage) getActivity()).callFragmentLogin();
-
-
-
     }
-
-
 }
 
 

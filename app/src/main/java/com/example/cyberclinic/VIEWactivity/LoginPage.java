@@ -17,19 +17,24 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         getSupportActionBar().hide();
-        callFragmentRegistration(); }
-        public void callFragmentLogin() {
-        FragmentManager fragmentManager= getSupportFragmentManager();
+        callFragmentRegistration();
+    }
+
+    public void callFragmentLogin() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.frameLayout,new LoginFragment())
+                .replace(R.id.frameLayout, new LoginFragment())
                 .addToBackStack(null)
-                .commit(); }
+                .commit();
+    }
+
     public void callFragmentRegistration() {
-        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.frameLayout,new RegisterAccountFragment())
+                .replace(R.id.frameLayout, new RegisterAccountFragment())
                 .addToBackStack(null)
-                .commit(); }
+                .commit();
+    }
 
     boolean doubleBackToExitPressedOnce = false;
 
